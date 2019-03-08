@@ -1,0 +1,11 @@
+Firefox
+Sublime Text 3 
+vscode (ppa)
+micro (via snapd)
+JetBrains Toolbox (and others)
+Slack
+Caprine
+Transmission
+
+Robo3T
+Postman

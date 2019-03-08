@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ANSIescape",
+		"Diffy",
+		"Indent XML",
+		"Markdown Table Formatter",
+		"MarkdownEditing",
+		"MarkdownLivePreview",
+		"MarkdownPreview",
+		"Package Control",
+		"Prolog",
+		"Pug",
+		"SML (Standard ML)",
+		"Text Pastry",
+		"TypeScript",
+		"xml2json"
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"CtrlD": "SpawnMultiCursor",
+	"Esc": "RemoveAllMultiCursors",
+	"\b": "DeleteWordLeft",
+	
+	"CtrlShiftRight": "SelectWordRight",
+	"CtrlShiftLeft": "SelectWordLeft",
+	"CtrlRight": "WordRight",
+	"CtrlLeft": "WordLeft"
+}

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+KEYBOARD=$(lsusb | grep -iq apple && echo apple)
+case $KEYBOARD in
+  "apple" )
+    dconf write /org/gnome/desktop/input-sources/xkb-options "['altwin:swap_alt_win']"
+    if [ -d /sys/module/hid_apple ]; then
+      echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode > /dev/null
+    fi
+
+    xmodmap -e "keycode 94 = grave asciitilde"
+    xmodmap -e "keycode 49 = less greater" 
+
+    echo "Using apple keyboard settings."
+    ;;
+  * )
+    dconf reset /org/gnome/desktop/input-sources/xkb-options
+    
+    # if [ -e /sys/module/hid_apple/parameters/fnmode ]; then
+      # echo "TODO: restore '/sys/module/hid_apple/parameters/fnmode' file"
+      # sudo rm /sys/module/hid_apple/parameters/fnmode
+    # fi
+    
+    xmodmap -e "keycode 49 = grave asciitilde"
+    xmodmap -e "keycode 94 = less greater" 
+
+    echo "Using standard keyboard settings."
+    ;;
+esac
+
+# DBUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pidof -s gnome-session-binary)/environ | sed 's/DBUS_SESSION_BUS_ADDRESS=//g')
+
+# dbus-monitor --address "$DBUS_ADDRESS" "type='signal',interface='org.freedesktop.DBus.Properties'" | 
+	# while read x; do 
+		# grep -q ".*PowerSaveMode.*" && grep -q ".*int32 0.*" && switch;
+	# done
