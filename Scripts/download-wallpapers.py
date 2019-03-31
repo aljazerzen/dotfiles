@@ -58,4 +58,4 @@ def download_category(category):
 
 
 # list_categories()
-download_category('macro')
+download_category('beach')

@@ -1,10 +1,10 @@
 {
-	"CtrlD": "SpawnMultiCursor",
-	"Esc": "RemoveAllMultiCursors",
-	"\b": "DeleteWordLeft",
-	
-	"CtrlShiftRight": "SelectWordRight",
-	"CtrlShiftLeft": "SelectWordLeft",
-	"CtrlRight": "WordRight",
-	"CtrlLeft": "WordLeft"
+    "\u0008": "DeleteWordLeft",
+    "Alt-/": "lua:comment.comment",
+    "CtrlD": "SpawnMultiCursor",
+    "CtrlLeft": "WordLeft",
+    "CtrlRight": "WordRight",
+    "CtrlShiftLeft": "SelectWordLeft",
+    "CtrlShiftRight": "SelectWordRight",
+    "Esc": "RemoveAllMultiCursors"
 }

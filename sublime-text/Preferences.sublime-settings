@@ -6,8 +6,9 @@
 		"catalogue",
 		"offline"
 	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"font_face": "Monacco",
-	"font_size": 11,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"Markdown",
