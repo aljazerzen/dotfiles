@@ -138,11 +138,16 @@
         "command": "workbench.action.terminal.focus"
     },
     {
-        "key": "f5",
-        "command": "octave.run"
-    },
-    {
         "key": "ctrl+alt+s",
         "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "git.push"
     }
 ]

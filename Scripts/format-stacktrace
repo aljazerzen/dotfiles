@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo $1
+node /home/aljaz/Scripts/format-stacktrace.js < $1 > tmp
+rm $1
+mv tmp $1
