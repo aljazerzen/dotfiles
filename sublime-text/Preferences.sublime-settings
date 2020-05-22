@@ -12,5 +12,6 @@
 	[
 		"Vintage"
 	],
+	"draw_centered": true,
 	"theme": "Adaptive.sublime-theme"
 }
