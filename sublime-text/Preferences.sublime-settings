@@ -11,8 +11,8 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Markdown",
 		"Vintage"
 	],
+	"draw_centered": true,
 	"theme": "Adaptive.sublime-theme"
 }

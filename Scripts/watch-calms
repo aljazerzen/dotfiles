@@ -1,0 +1,20 @@
+
+function fetch_version() {
+	curl -s https://app.calms.com/services/calms-main/version | cut -c 2- | rev | cut -c 2- | rev
+}
+
+last=unknown
+
+while :
+do
+	current=`fetch_version`
+
+	if [ -n "$current" ]; then
+		echo "$current";
+		if [ "$last" != "$current" ]; then
+			notify-send "CALMS main version: $current" "last version of main microservice version was $last"
+		fi 
+		last=$current
+	fi
+	sleep 5
+done

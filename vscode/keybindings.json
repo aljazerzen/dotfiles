@@ -139,11 +139,11 @@
     },
     {
         "key": "ctrl+shift+k",
-        "command": "git.push"
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
     },
     {
         "key": "ctrl+shift+k",
-        "command": "-editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
+        "command": "git.push"
     }
 ]

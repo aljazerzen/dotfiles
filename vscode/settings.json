@@ -47,10 +47,11 @@
         ".vscode",
         "typings",
         "package.json",
-        "**/01_adventure.spec.ts",
+        "**/01_adventure.spec.ts"
     ],
     "cSpell.language": "en",
     "cSpell.userWords": [
+        "ALUMINIUM",
         "Angulartics",
         "Coinbase",
         "Crafing",
@@ -60,9 +61,12 @@
         "Geocode",
         "Geocoding",
         "Injectable",
+        "Kairos",
         "LEADERBOARD",
         "LSTM",
         "Microservice",
+        "Millis",
+        "PNPU",
         "Participations",
         "Promisify",
         "RMSE",
@@ -90,6 +94,7 @@
         "gdpr",
         "ipstack",
         "keras",
+        "klass",
         "metatype",
         "microservices",
         "mimetype",
@@ -107,6 +112,7 @@
         "tesselate",
         "tesselated",
         "titlecase",
+        "topbar",
         "totp",
         "unpublish",
         "webhook",
@@ -143,7 +149,7 @@
     ],
     "vetur.completion.autoImport": true,
     "vetur.format.defaultFormatter.js": "prettier",
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "gitlens.blame.highlight.enabled": false,
@@ -158,9 +164,7 @@
     "files.associations": {
         "*.mustache": "mustache"
     },
-    "[mustache]": {
-        
-    },
+    "[mustache]": {},
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
