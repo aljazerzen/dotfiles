@@ -58,6 +58,7 @@
         "Cusum",
         "Datasets",
         "Dropdown",
+        "EMQX",
         "Geocode",
         "Geocoding",
         "Injectable",
@@ -86,7 +87,9 @@
         "blockchain",
         "braintree",
         "bson",
+        "caems",
         "denormalize",
+        "deserialization",
         "dimen",
         "downsample",
         "firestore",
@@ -98,6 +101,7 @@
         "metatype",
         "microservices",
         "mimetype",
+        "mqtt",
         "nestjs",
         "numpy",
         "petrolium",
@@ -178,5 +182,10 @@
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    "gitlens.keymap": "none"
+    "gitlens.keymap": "none",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.languageServer": "Microsoft"
+    
 }

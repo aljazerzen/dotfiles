@@ -1,1 +1,1 @@
-ssh -NL 9090:localhost:9090 zver
+socat TCP-LISTEN:9090,fork TCP:192.168.1.76:9090

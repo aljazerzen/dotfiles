@@ -1,3 +1,4 @@
+#!/bin/bash
 
 function fetch_version() {
 	curl -s https://app.calms.com/services/calms-main/version | cut -c 2- | rev | cut -c 2- | rev

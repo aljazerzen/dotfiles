@@ -11,8 +11,10 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Prolog",
+		"SML (Standard ML)",
+		"Vintage",
+		"Markdown"
 	],
-	"draw_centered": true,
 	"theme": "Adaptive.sublime-theme"
 }
