@@ -1,2 +1,0 @@
-cd /home/aljaz/Projects
-zip /home/aljaz/63160011-$1.zip -r prev -x prev/prgs/**compiler* prev/prgs/**\*.class prev/prgs/**\*.html prev/prgs/**\*.xml *.idea*

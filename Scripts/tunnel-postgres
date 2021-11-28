@@ -1,1 +1,0 @@
-ssh -NL 5431:localhost:5432 zver

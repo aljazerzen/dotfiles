@@ -1,1 +1,0 @@
-ssh -NL 8079:localhost:8080 zver & ssh -NL 4241:localhost:4242 zver

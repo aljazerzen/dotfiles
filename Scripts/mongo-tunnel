@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ ! $1 ]; then
-  echo "Where should i connect to?"
-  exit 1
-fi
-
-ssh -L 27018:localhost:27017 $1
-

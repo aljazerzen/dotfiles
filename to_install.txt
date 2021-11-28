@@ -1,11 +1,22 @@
 Firefox
 Sublime Text 3 
-vscode (ppa)
-micro (via snapd)
+vscode
 JetBrains Toolbox (and others)
-Slack
-Caprine
-Transmission
+nvim
+jq
+rustup
+tealdear
+fzf
+tmux
+git
+zsh https://github.com/MKAbuMattar/zsh
+zgen https://github.com/tarjoilija/zgen
 
-Robo3T
-Postman
+ncdu
+delta https://github.com/dandavison/delta
+
+flatpak
+nheko
+Slack
+
+
