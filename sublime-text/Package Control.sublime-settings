@@ -6,11 +6,12 @@
 	"installed_packages":
 	[
 		"ANSIescape",
+		"Bibtex Bibliography Sort",
 		"Diffy",
 		"Indent XML",
 		"MarkdownEditing",
 		"Package Control",
-		"Pretty JSON",
-		"Text Pastry"
-	]
+		"Text Pastry",
+		"WordCount",
+	],
 }
