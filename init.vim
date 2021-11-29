@@ -3,11 +3,11 @@
 """ Vim-Plug
 call plug#begin()
 
-" Some color scheme other then default
-Plug 'ayu-theme/ayu-vim'
+" Colors
+Plug 'mangeshrex/uwu.vim' 
 
 " Functionalities
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 " Collection of common configurations for the Nvim LSP client
@@ -35,6 +35,12 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" status line
+Plug 'vim-airline/vim-airline'
+
+" git 
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -96,8 +102,8 @@ EOF
 
 " Code navigation shortcuts
 " as found in :help lsp
-nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <c-b> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <F12> <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
@@ -176,12 +182,20 @@ set hidden
 set number
 set title
 
+""" Keybindings
+nnoremap <C-p> :Files<cr>
+nnoremap <C-S-p> :Commands<cr>
+nnoremap <M-p> :Commands<cr>
+
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 set termguicolors
-let ayucolor="dark"
 
 " Main Coloring Configurations
-colorscheme ayu
+colorscheme uwu
 syntax on
 
+""" Language servers
+lua << EOL
+require'lspconfig'.rust_analyzer.setup{}
+EOL
 

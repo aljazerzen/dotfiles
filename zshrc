@@ -7,7 +7,7 @@ source "${HOME}/.zgen/zgen.zsh"
 zgen oh-my-zsh
 zgen oh-my-zsh plugins/tmux
 zgen oh-my-zsh plugins/sudo
-zgen load unixorn/fzf-zsh-plugin . main
+zgen oh-my-zsh plugins/fzf
 
 ## Path options
 

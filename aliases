@@ -7,3 +7,4 @@ alias gp='echo "Pushing:"; git log $(git rev-parse --abbrev-ref HEAD)...$(git re
 alias webapp="cd Projects/calms-gateway/src/main/webapp"
 
 alias less="less -R"
+alias vim="nvim"
