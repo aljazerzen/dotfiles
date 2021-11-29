@@ -6,5 +6,6 @@
     "CtrlRight": "WordRight",
     "CtrlShiftLeft": "SelectWordLeft",
     "CtrlShiftRight": "SelectWordRight",
+    "CtrlUnderscore": "lua:comment.comment",
     "Esc": "RemoveAllMultiCursors"
 }
