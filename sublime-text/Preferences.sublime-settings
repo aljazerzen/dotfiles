@@ -56,9 +56,9 @@
 		"interpretacijsko"
 	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
-	"font_face": "Monacco",
-	"font_size": 14,
-	"theme": "Adaptive.sublime-theme"
+	"font_face": "Hack",
+	"font_size": 13,
+	"theme": "Adaptive.sublime-theme",
 	"dictionary": "Packages/Dictionaries/Slovenian.dic",
 	"draw_centered": false,
 	"ignored_packages":

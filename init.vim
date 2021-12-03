@@ -4,7 +4,7 @@
 call plug#begin()
 
 " Colors
-Plug 'mangeshrex/uwu.vim' 
+Plug 'morhetz/gruvbox' 
 
 " Functionalities
 Plug 'junegunn/fzf.vim'
@@ -41,6 +41,11 @@ Plug 'vim-airline/vim-airline'
 " git 
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+
+" multi cursor
+Plug 'mg979/vim-visual-multi'
+
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -101,9 +106,7 @@ require('rust-tools').setup(opts)
 EOF
 
 " Code navigation shortcuts
-" as found in :help lsp
-nnoremap <silent> <c-b> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> <F12> <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
@@ -111,7 +114,9 @@ nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
-
+nnoremap <silent> C-l   <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <silent> [d   <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> ]d   <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " Quick-fix
 nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
 
@@ -186,16 +191,23 @@ set title
 nnoremap <C-p> :Files<cr>
 nnoremap <C-S-p> :Commands<cr>
 nnoremap <M-p> :Commands<cr>
+nnoremap <C-e> :NERDTreeToggle %<CR>
+
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 set termguicolors
 
 " Main Coloring Configurations
-colorscheme uwu
+colorscheme gruvbox
 syntax on
 
 """ Language servers
 lua << EOL
 require'lspconfig'.rust_analyzer.setup{}
+require'lspconfig'.java_language_server.setup{
+    cmd = { '/home/aljaz/Apps/java-language-server/dist/lang_server_linux.sh' }
+}
 EOL
 
