@@ -9,6 +9,8 @@ zgen oh-my-zsh plugins/tmux
 zgen oh-my-zsh plugins/sudo
 zgen oh-my-zsh plugins/fzf
 
+zstyle ':omz:update' mode disabled
+
 ## Path options
 
 export PATH=$HOME/.local/bin:$PATH

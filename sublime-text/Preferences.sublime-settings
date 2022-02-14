@@ -59,11 +59,11 @@
 	"font_face": "Hack",
 	"font_size": 13,
 	"theme": "Adaptive.sublime-theme",
-	"dictionary": "Packages/Dictionaries/Slovenian.dic",
+	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_centered": false,
 	"ignored_packages":
 	[
 		"Vintage",
 	],
-	"theme": "Adaptive.sublime-theme"
+	/*"theme": "Adaptive.sublime-theme"*/
 }
