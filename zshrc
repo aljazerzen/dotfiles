@@ -15,4 +15,5 @@ export PATH=$HOME/.local/bin:$PATH
 
 export EDITOR=nvim
 
+source $HOME/.profile
 source $HOME/.aliases
