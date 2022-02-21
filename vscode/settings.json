@@ -1,39 +1,102 @@
 {
-    "window.enableMenuBarMnemonics": false,
-    "editor.fontSize": 15,
-    "editor.fontFamily": "'Monaco', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.cursorStyle": "line",
-    "editor.renderLineHighlight": "gutter",
-    "editor.renderIndentGuides": true,
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "files.autoSave": "off",
-    "git.enableSmartCommit": true,
-    "explorer.confirmDelete": false,
-    "explorer.sortOrder": "type",
-    "explorer.autoReveal": true,
-    "git.confirmSync": false,
-    "typescript.updateImportsOnFileMove.enabled": "never",
-    "multiCommand.commands": [
-        {
-            "command": "multiCommand.toggleCommentAndDown",
-            "sequence": [
-                "editor.action.commentLine",
-                "cursorDown"
-            ]
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[latex]": {
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.wordWrap": "on"
+    },
+    "[mustache]": {},
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
         },
-        {
-            "command": "multiCommand.closeAllPanels",
-            "sequence": [
-                "workbench.action.closePanel",
-                "workbench.action.maximizeEditor"
-            ]
-        }
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "cSpell.enableFiletypes": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml",
+        "tex"
     ],
-    "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.folders.theme": "classic",
-    "editor.minimap.enabled": false,
-    "workbench.startupEditor": "newUntitledFile",
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "git-commit",
+        "go",
+        "graphql",
+        "handlebars",
+        "haskell",
+        "html",
+        "jade",
+        "java",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "jupyter",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "python",
+        "pug",
+        "restructuredtext",
+        "rust",
+        "scala",
+        "scss",
+        "swift",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "yaml",
+        "yml"
+    ],
     "cSpell.ignorePaths": [
         "**/package-lock.json",
         "**/node_modules/**",
@@ -165,180 +228,110 @@
         "webhook",
         "zipcode"
     ],
-    "cSpell.enableFiletypes": [
-        "asciidoc",
-        "c",
-        "cpp",
-        "csharp",
-        "css",
-        "go",
-        "handlebars",
-        "html",
-        "jade",
-        "javascript",
-        "javascriptreact",
-        "json",
-        "jsonc",
-        "latex",
-        "less",
-        "markdown",
-        "php",
-        "plaintext",
-        "pub",
-        "python",
-        "restructuredtext",
-        "rust",
-        "scss",
-        "text",
-        "typescript",
-        "typescriptreact",
-        "yml",
-        "tex"
-    ],
-    "workbench.activityBar.visible": true,
-    "liveServer.settings.donotVerifyTags": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "gitlens.blame.highlight.enabled": false,
-    "gitlens.blame.heatmap.enabled": false,
-    "python.jediEnabled": false,
-    "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "C_Cpp.default.cStandard": "c11",
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-    "files.associations": {
-        "*.mustache": "mustache"
-    },
-    "[mustache]": {},
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "extensions.ignoreRecommendations": false,
-    "git.autofetch": true,
-    "update.mode": "none",
-    "window.titleBarStyle": "native",
-    "git.autofetch": true,
+    "crates.compatibleDecorator": " ${version}",
+    "crates.incompatibleDecorator": " ${version}",
     "diffEditor.ignoreTrimWhitespace": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
-    },
-    "gitlens.keymap": "none",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
+    "docker.volumes.sortBy": "CreatedTime",
+    "editor.cursorStyle": "line",
+    "editor.fontFamily": "'Monaco', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 15,
+    "editor.insertSpaces": true,
+    "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "latex-workshop.view.pdf.viewer": "tab",
-    "python.defaultInterpreterPath": "/bin/python",
-    "[latex]": {
-        "editor.wordWrap": "on",
-        "editor.formatOnPaste": false,
-        "editor.suggestSelection": "recentlyUsedByPrefix"
-    },
+    "editor.renderIndentGuides": true,
+    "editor.renderLineHighlight": "gutter",
+    "editor.tabSize": 2,
+    "explorer.autoReveal": true,
+    "explorer.confirmDelete": false,
+    "explorer.sortOrder": "type",
     "extensions.ignoreRecommendations": true,
-    "python.terminal.activateEnvironment": false,
     "files.associations": {
+        "*.mustache": "mustache",
         "*.rmd": "markdown"
     },
-    "jupyter.experiments.enabled": false,
-    "r.sessionWatcher": true,
-    "crates.incompatibleDecorator": " ${version}",
-    "crates.compatibleDecorator": " ${version}",
+    "files.autoSave": "off",
     "files.exclude": {
         "**/.classpath": true,
+        "**/.factorypath": true,
         "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+        "**/.settings": true
     },
-    "docker.volumes.sortBy": "CreatedTime",
-    "vs-kubernetes": {
-        "vs-kubernetes.namespace": "",
-        "vs-kubernetes.kubectl-path": "",
-        "vs-kubernetes.helm-path": "",
-        "vs-kubernetes.draft-path": "",
-        "vs-kubernetes.minikube-path": "",
-        "vs-kubernetes.kubectlVersioning": "user-provided",
-        "vs-kubernetes.outputFormat": "yaml",
-        "vs-kubernetes.kubeconfig": "",
-        "vs-kubernetes.knownKubeconfigs": [],
-        "vs-kubernetes.autoCleanupOnDebugTerminate": false,
-        "vs-kubernetes.nodejs-autodetect-remote-root": true,
-        "vs-kubernetes.nodejs-remote-root": "",
-        "vs-kubernetes.nodejs-debug-port": 9229,
-        "checkForMinikubeUpgrade": true,
-        "logsDisplay": "webview",
-        "imageBuildTool": "Docker"
-    },
-    "rust-client.engine": "rust-analyzer",
-    "rust-client.channel": "stable",
-    "[typescript]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
+    "git.autofetch": false,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "gitlens.blame.heatmap.enabled": false,
+    "gitlens.blame.highlight.enabled": false,
+    "gitlens.keymap": "none",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "jupyter.askForKernelRestart": false,
+    "jupyter.disableJupyterAutoStart": true,
+    "jupyter.experiments.enabled": false,
+    "jupyter.interactiveWindowMode": "perFile",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
     "macros": {
         "pythonExecSelectionAndCursorDown": [
-            "python.execSelectionInTerminal", 
-            "cursorDown" 
+            "python.execSelectionInTerminal",
+            "cursorDown"
         ]
     },
-    "pythonTestExplorer.testFramework": "unittest",
-    "rust-analyzer.procMacro.enable": true,
+    "material-icon-theme.folders.theme": "classic",
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.toggleCommentAndDown",
+            "sequence": [
+                "editor.action.commentLine",
+                "cursorDown"
+            ]
+        },
+        {
+            "command": "multiCommand.closeAllPanels",
+            "sequence": [
+                "workbench.action.closePanel",
+                "workbench.action.maximizeEditor"
+            ]
+        }
+    ],
     "pretty-formatter.indentSize": 2,
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "window.menuBarVisibility": "toggle",
-    "jupyter.disableJupyterAutoStart": true,
-    "workbench.editor.enablePreview": false,
+    "python.defaultInterpreterPath": "/bin/python",
+    "python.jediEnabled": false,
     "python.languageServer": "Pylance",
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+    "python.terminal.activateEnvironment": false,
+    "pythonTestExplorer.testFramework": "unittest",
+    "r.sessionWatcher": true,
+    "redhat.telemetry.enabled": false,
+    "rust-analyzer.procMacro.enable": true,
+    "rust-client.channel": "stable",
+    "rust-client.engine": "rust-analyzer",
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "update.mode": "none",
+    "vs-kubernetes": {
+        "checkForMinikubeUpgrade": true,
+        "imageBuildTool": "Docker",
+        "logsDisplay": "webview",
+        "vs-kubernetes.autoCleanupOnDebugTerminate": false,
+        "vs-kubernetes.draft-path": "",
+        "vs-kubernetes.helm-path": "",
+        "vs-kubernetes.knownKubeconfigs": [],
+        "vs-kubernetes.kubeconfig": "",
+        "vs-kubernetes.kubectl-path": "",
+        "vs-kubernetes.kubectlVersioning": "user-provided",
+        "vs-kubernetes.minikube-path": "",
+        "vs-kubernetes.namespace": "",
+        "vs-kubernetes.nodejs-autodetect-remote-root": true,
+        "vs-kubernetes.nodejs-debug-port": 9229,
+        "vs-kubernetes.nodejs-remote-root": "",
+        "vs-kubernetes.outputFormat": "yaml"
     },
-    "jupyter.askForKernelRestart": false,
-    "cSpell.enabledLanguageIds": [
-        "asciidoc",
-        "c",
-        "cpp",
-        "csharp",
-        "css",
-        "git-commit",
-        "go",
-        "graphql",
-        "handlebars",
-        "haskell",
-        "html",
-        "jade",
-        "java",
-        "javascript",
-        "javascriptreact",
-        "json",
-        "jsonc",
-        "jupyter",
-        "latex",
-        "less",
-        "markdown",
-        "php",
-        "plaintext",
-        "python",
-        "pug",
-        "restructuredtext",
-        "rust",
-        "scala",
-        "scss",
-        "swift",
-        "text",
-        "typescript",
-        "typescriptreact",
-        "vue",
-        "yaml",
-        "yml",
-        "latex"
-    ]
+    "window.enableMenuBarMnemonics": false,
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
+    "workbench.activityBar.visible": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile"
 }
