@@ -17,11 +17,15 @@ Plug 'tpope/vim-fugitive'
 " multi cursor
 Plug 'mg979/vim-visual-multi'
 
+" comment toggle
+Plug 'numToStr/Comment.nvim'
+
 Plug 'preservim/nerdtree'
 
 call plug#end()
 
-
+lua require('Comment').setup()
+nmap <C-_> <CMD>lua require("Comment.api").toggle_current_linewise()<cr>j
 
 " Set completeopt to have a better completion experience
 " :help completeopt
