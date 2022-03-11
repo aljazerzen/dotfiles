@@ -55,7 +55,7 @@
 		"subsubsection",
 		"interpretacijsko"
 	],
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"color_scheme": "gruvbox (Dark) (Medium).sublime-color-scheme",
 	"font_face": "Hack",
 	"font_size": 13,
 	"theme": "Adaptive.sublime-theme",
@@ -65,5 +65,6 @@
 	[
 		"Vintage",
 	],
+	"remember_workspace": false,
 	/*"theme": "Adaptive.sublime-theme"*/
 }

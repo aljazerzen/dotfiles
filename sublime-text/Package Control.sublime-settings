@@ -6,9 +6,8 @@
 	"installed_packages":
 	[
 		"ANSIescape",
-		"Bibtex Bibliography Sort",
+		"gruvbox",
 		"Diffy",
-		"Indent XML",
 		"MarkdownEditing",
 		"Package Control",
 		"Text Pastry",
