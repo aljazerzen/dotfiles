@@ -3,6 +3,7 @@ alias gs="git status"
 alias gf="git fetch"
 alias gg="git log --branches --remotes --tags --graph --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --date=relative"
 alias gp='echo "Pushing:"; git log $(git rev-parse --abbrev-ref HEAD)...$(git rev-parse --symbolic-full-name --abbrev-ref @{u}) --oneline | cat; echo ""; git push'
+alias gsync="git add . && git commit -m sync && git pull && git push"
 
 alias webapp="cd Projects/calms-gateway/src/main/webapp"
 
