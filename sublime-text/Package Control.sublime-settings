@@ -6,11 +6,12 @@
 	"installed_packages":
 	[
 		"ANSIescape",
-		"gruvbox",
 		"Diffy",
+		"gruvbox",
 		"MarkdownEditing",
 		"Package Control",
 		"Text Pastry",
 		"WordCount",
+		"xit!",
 	],
 }
