@@ -24,3 +24,4 @@ export EDITOR=nvim
 
 source $HOME/.profile
 source $HOME/.aliases
+
