@@ -1,0 +1,18 @@
+#!/bin/bash
+
+sqlite3 :memory: -cmd '.mode tabs' -cmd ".import $HOME/time-tracking.tsv tt" -cmd '.mode markdown' '
+    with table_0 as(
+        select substr(time, 0, 11) as date, action, lag(action) over() as prev_action, time, lag(time) over() as time_start 
+        from tt
+    ), 
+    table_1 as (
+        select date, sum(unixepoch(time) - unixepoch(time_start)) as sec 
+        from table_0 
+        where action = "stop" and prev_action = "start"
+        group by date
+    )
+    select 
+        date, 
+        substr("00" || (sec / 60 / 60), -2, 2) || ":" || substr("00" || ((sec / 60) % 60), -2, 2) || ":" || substr("00" || (sec % 60), -2, 2) as duration 
+    from table_1
+;'

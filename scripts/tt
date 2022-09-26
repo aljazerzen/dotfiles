@@ -1,0 +1,51 @@
+#!/bin/bash
+
+out_file=$HOME/time-tracking.tsv
+
+function push_record {
+    time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+    entry="$time\t$1"
+    echo -e $entry
+
+    out=$2
+    if [ ! -e $out ]; then
+        echo -e "time\taction" >> $out
+    fi
+
+    echo -e $entry >> $out
+}
+
+function analyze {
+    # add a stop record temporarily
+    tmp_file=/tmp/time-tracking.tsv
+    cp $out_file $tmp_file 
+    push_record stop $tmp_file
+
+    sqlite3 :memory: -cmd '.mode tabs' -cmd ".import $tmp_file tt" -cmd '.mode markdown' '
+    with table_0 as(
+        select substr(time, 0, 11) as date, action, lag(action) over() as prev_action, time, lag(time) over() as time_start 
+        from tt
+    ), 
+    table_1 as (
+        select date, sum(unixepoch(time) - unixepoch(time_start)) as sec 
+        from table_0 
+        where action = "stop" and prev_action = "start"
+        group by date
+    )
+    select 
+        date, 
+        substr("00" || (sec / 60 / 60), -2, 2) || ":" || substr("00" || ((sec / 60) % 60), -2, 2) || ":" || substr("00" || (sec % 60), -2, 2) as duration 
+    from table_1
+    ;'
+
+    rm $tmp_file
+}
+
+if [ -n "$1" ]; then
+    push_record $1 $out_file
+else
+    analyze
+fi
+
+

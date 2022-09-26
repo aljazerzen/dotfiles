@@ -17,14 +17,14 @@
         "editor.wordWrap": "on"
     },
     "[mustache]": {},
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
     "[typescript]": {
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         },
         "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[rust]": {
+        "editor.tabSize": 4,
     },
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -265,12 +265,9 @@
             ]
         }
     ],
-    "pretty-formatter.indentSize": 2,
     "python.defaultInterpreterPath": "/bin/python",
-    "python.jediEnabled": false,
     "python.languageServer": "Pylance",
     "python.terminal.activateEnvironment": false,
-    "pythonTestExplorer.testFramework": "unittest",
     "r.sessionWatcher": true,
     "redhat.telemetry.enabled": false,
     "rust-analyzer.procMacro.enable": true,
@@ -311,6 +308,11 @@
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.guides.indentation": true
+    "editor.guides.indentation": true,
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "79",
+        "--skip-string-normalization"
+    ],
+    "python.formatting.provider": "black",
 }
-
