@@ -2,7 +2,7 @@
 	name = aljazerzen
 	email = aljaz.erzen@gmail.com
 [core]
-	editor = nvim
+	editor = micro
 	autocrlf = input
     pager = delta
 [interactive]
