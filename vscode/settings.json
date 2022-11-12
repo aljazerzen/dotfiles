@@ -19,7 +19,7 @@
     "[mustache]": {},
     "[typescript]": {
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": false
         },
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
@@ -203,14 +203,12 @@
     ],
     "crates.compatibleDecorator": " ${version}",
     "crates.incompatibleDecorator": " ${version}",
-    "diffEditor.ignoreTrimWhitespace": false,
     "docker.volumes.sortBy": "CreatedTime",
     "editor.cursorStyle": "line",
     "editor.fontFamily": "'Monaco', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 15,
     "editor.insertSpaces": true,
     "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderLineHighlight": "gutter",
     "editor.tabSize": 4,
     "explorer.autoReveal": true,
@@ -295,7 +293,6 @@
     },
     "window.enableMenuBarMnemonics": false,
     "window.menuBarVisibility": "toggle",
-    "window.titleBarStyle": "native",
     "workbench.editor.enablePreview": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
@@ -315,4 +312,11 @@
         "--skip-string-normalization"
     ],
     "python.formatting.provider": "black",
+    "editor.rulers": [
+        {
+            "column": 79
+        }
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "diffEditor.ignoreTrimWhitespace": false,
 }
