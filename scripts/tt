@@ -22,22 +22,43 @@ function analyze {
     cp $out_file $tmp_file 
     push_record stop $tmp_file
 
-    sqlite3 :memory: -cmd '.mode tabs' -cmd ".import $tmp_file tt" -cmd '.mode markdown' '
-    with table_0 as(
-        select substr(time, 0, 11) as date, action, lag(action) over() as prev_action, time, lag(time) over() as time_start 
-        from tt
-    ), 
-    table_1 as (
-        select date, sum(unixepoch(time) - unixepoch(time_start)) as sec 
-        from table_0 
-        where action = "stop" and prev_action = "start"
-        group by date
+    pq --backend=duckdb --from "tt=$tmp_file" '
+    # function declaration that is a wrapper for substr SQL function
+    func substr text start len -> s"substr({text}, {start}, {len})"
+    
+    
+    # start of the pipeline
+    from tt  # as declared in --from
+    
+    # compute a few new columns
+    derive [
+        date = substr time 0 11,     # extract date from column `time`
+        prev_action = lag 1 action,  # lag action column
+        prev_time = lag 1 time,     # lag time column
+    ]
+    
+    # pick only rows that correspond to intervals that I want to track
+    filter action == "stop" and prev_action == "start"
+    
+    # for each date
+    group date (
+        # sum durations of those intervals
+        aggregate [sec = sum s"EXTRACT(EPOCH FROM {time - prev_time})"]
     )
-    select 
-        date, 
-        substr("00" || (sec / 60 / 60), -2, 2) || ":" || substr("00" || ((sec / 60) % 60), -2, 2) || ":" || substr("00" || (sec % 60), -2, 2) as duration 
-    from table_1
-    ;'
+    
+    # compute more columns
+    derive [
+        hours = substr f"00{sec / (60 * 60)}" 0-2 2,
+        minutes = substr f"00{(sec / 60) % 60}" 0-2 2,
+        seconds = substr f"00{sec % 60}" 0-2 2,
+    ]
+    
+    # expose only date and pretty-printed duration
+    select [
+        date,
+        duration = f"{hours}:{minutes}:{seconds}"
+    ]
+    '
 
     rm $tmp_file
 }

@@ -1,13 +1,16 @@
 alias nr="npm run"
 alias gs="git status"
-alias gf="git fetch"
+alias gf="git fetch --prune"
 alias gg="git log --branches --remotes --tags --graph --pretty='%C(yellow)%h %C(cyan)%cd %Cblue%aN%C(auto)%d %Creset%s' --date=relative"
 alias gp='echo "Pushing:"; git log $(git rev-parse --abbrev-ref HEAD)...$(git rev-parse --symbolic-full-name --abbrev-ref @{u}) --oneline | cat; echo ""; git push'
+alias gpub='git push --set-upstream origin $(git branch --show-current)'
+alias gpr='gpub && gh pr create --fill && gh pr merge --auto --squash --delete-branch'
 alias gsync="git add . && git commit -m sync && git pull && git push"
+alias gfix="git add . && git commit -m fix && git push"
 
-alias webapp="cd Projects/calms-gateway/src/main/webapp"
 alias cb='xclip -sel clip'
 
 alias less="less -R"
 alias vim="micro"
 alias vi="micro"
+

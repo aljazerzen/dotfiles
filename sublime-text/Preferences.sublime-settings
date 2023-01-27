@@ -57,7 +57,7 @@
 	],
 	"color_scheme": "gruvbox (Dark) (Medium).sublime-color-scheme",
 	"font_face": "Hack",
-	"font_size": 13,
+	"font_size": 12,
 	"theme": "Adaptive.sublime-theme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_centered": false,

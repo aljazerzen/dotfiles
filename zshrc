@@ -20,7 +20,7 @@ fi
 
 export PATH=$HOME/.local/bin:$PATH
 
-export EDITOR=nvim
+export EDITOR=micro
 
 source $HOME/.profile
 source $HOME/.aliases
